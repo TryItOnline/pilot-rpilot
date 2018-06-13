@@ -2,6 +2,7 @@
   err.c - Error handling code for RPilot
 */
 
+#include <string.h>
 #include "rpilot.h"
 
 int yesno( char *msg )

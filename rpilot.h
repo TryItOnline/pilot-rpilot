@@ -60,5 +60,7 @@ char *get_strval( char *str );
 void init(); 
 int readfile( char *filename );
 extern rpinfo *rpi;
+int express( char *form );
+int interp();
 
 #endif

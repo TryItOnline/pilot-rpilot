@@ -4,10 +4,10 @@
 
 
 #include "rpilot.h"
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 
 #ifndef isblank
 #define isblank(ch) (ch==' ' || ch == '\t')

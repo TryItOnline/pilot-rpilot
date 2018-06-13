@@ -1,12 +1,26 @@
 /*
- *  math.h - header for math.c
+ * math.c - mathematical functions for RPilot
+ * 
+ * major update - aug.11.2000
+ *  - remove all garbage, express() remains only as a wrapper to calc()
  */
 
-#ifndef _math_h_
-#define _math_h_
+#include "rpilot.h"
+#include "calc.h"
 
+#include <string.h>
 
-// Returns the value of a given mathematical formula 
-int express( char *form );
+int express( char *form )
+{
+  int result, status;
 
-#endif
+  result = calc( form, &status );
+
+  if( status != 0 ) {  // error
+    err( EXP_MATH, "" );
+  }
+
+  return result;
+
+}
+

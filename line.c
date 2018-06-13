@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
-
+#include <string.h>
 
 // the input str should already be trim()ed
 

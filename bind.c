@@ -1,3 +1,4 @@
+#include <string.h>
 #include "rpilot.h"
 #include "bind.h"
 
