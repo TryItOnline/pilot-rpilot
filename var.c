@@ -50,7 +50,7 @@ void set_strvar( char *name, char *val )
   }
 
   // if we can't find the variable, make a new one
-  (strvar *)prev->next = new_strvar( name, val );
+  prev->next = (struct strvar *)new_strvar( name, val );
 }
 
 void set_numvar( char *name, int val )
@@ -67,7 +67,7 @@ void set_numvar( char *name, int val )
     n = (numvar *)n->next;
   }
 
-  (numvar *)prev->next = new_numvar( name, val );
+  prev->next = (struct numvar *)new_numvar( name, val );
 }
 
 char *get_strvar( char *name )

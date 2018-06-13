@@ -37,7 +37,7 @@ stack *stk_push( stack *stk, line *lne )
   stkitem *si;
 
   si = new_stkitem( lne );
-  (stkitem *)si->prev = stk->tail;  // worthless cast
+  si->prev = (struct stkitem *)stk->tail;  // worthless cast
   stk->tail = si;
   
   return stk;

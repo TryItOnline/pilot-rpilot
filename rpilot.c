@@ -58,7 +58,7 @@ int readfile( char *filename )
 	currlbl = (label *)currlbl->next;
       } else if( (toupper(inbuf[0]) != 'R') && 
 		 !((inbuf[0] == ':') && (lastcmd == 'R')) ) { 
-	(line *)currline->next = new_line( inbuf, currline->cmd, linenum );
+	currline->next = (struct line *)new_line( inbuf, currline->cmd, linenum );
 	currline = (line *)currline->next;
 	if( templbl != NULL ) {
 	  templbl->stmnt = (line *)currline;
